@@ -11,13 +11,7 @@ node {
    stage('Build') {
       // Run the maven build
       
-         sh "mvn clean install"
+         sh "mvn clean deploy"
    }
    
-   stage('Publish') {
-
-     nexusPublisher nexusInstanceId: 'NexusPipeline', nexusRepositoryId: 'PIPE', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/lib/jenkins/workspace/Pipeline_Jenkinsfile/target/obss-sdlc-0.0.1-SNAPSHOT']], mavenCoordinate: [artifactId: 'obss-proj', groupId: 'org.jenkins-ci.main', packaging: 'war', version: '2.23']]]
-
-   }
-
    }
