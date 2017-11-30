@@ -16,7 +16,7 @@ node {
    
    stage('Publish') {
 
-     nexusPublisher nexusInstanceId: '13.229.109.9', nexusRepositoryId: 'PIPE', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/lib/jenkins/workspace/Pipeline_Jenkinsfile/target/obss-sdlc-0.0.1-SNAPSHOT']], mavenCoordinate: [artifactId: 'obss-proj', groupId: 'org.jenkins-ci.main', packaging: 'war', version: '2.23']]]
+     nexusPublisher nexusInstanceId: 'NexusPipeline', nexusRepositoryId: 'PIPE', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/var/lib/jenkins/workspace/Pipeline_Jenkinsfile/target/obss-sdlc-0.0.1-SNAPSHOT']], mavenCoordinate: [artifactId: 'obss-proj', groupId: 'org.jenkins-ci.main', packaging: 'war', version: '2.23']]]
 
    }
 
