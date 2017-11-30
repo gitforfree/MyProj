@@ -40,4 +40,11 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	
+	<distributionManagement>
+  <snapshotRepository>
+    <id>PIPE</id>
+    <url>http://13.229.109.9:8081/nexus/content/repositories/PIPE</url>
+  </snapshotRepository>
+</distributionManagement>
 </project>
