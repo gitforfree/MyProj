@@ -1,12 +1,12 @@
-node {
+MyProj.gitnode {
    def mvnHome
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/gitforfree/'
+      git 'https://github.com/gitforfree/MyProj.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
-      mvnHome = tool 'M2'
+      mvnHome = /usr/share/maven
    }
    stage('Build') {
       // Run the maven build
